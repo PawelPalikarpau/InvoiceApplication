@@ -1,0 +1,4 @@
+"invoice number","invoice name","value","currency","vat","customer name","pesel","phone number","customer address"
+"1","Mobile Phone","15.07","PLN","8","John Smith","93070819661","732334211","Strzalkowskiego 15/7, 60-854 Poznan"
+"2","Window Glass","145.11","PLN","23","Marry Jobs","12345678990","567567567","Zlota 31/2, 60-000 Warszawa"
+"3","TV","1145.11","EUR","23","Bob Popins","56565678901","123123123","Grunwaldzka 147A/6B, 60-111 Wroclaw"

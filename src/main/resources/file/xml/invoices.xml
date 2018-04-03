@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmlData>
+    <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invoice">
+        <currency>PLN</currency>
+        <customer>
+            <address>
+                <city>Poznan</city>
+                <houseNumber>15</houseNumber>
+                <id>74</id>
+                <localNumber>7</localNumber>
+                <postalCode>60-854</postalCode>
+                <street>Strzalkowskiego</street>
+            </address>
+            <firstName>John</firstName>
+            <id>73</id>
+            <pesel>93070819661</pesel>
+            <phoneNumber>732334211</phoneNumber>
+            <surname>Smith</surname>
+        </customer>
+        <id>72</id>
+        <name>Mobile Phone</name>
+        <number>1</number>
+        <value>15.07</value>
+        <vat>8</vat>
+    </entities>
+    <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invoice">
+        <currency>PLN</currency>
+        <customer>
+            <address>
+                <city>Warszawa</city>
+                <houseNumber>31</houseNumber>
+                <id>77</id>
+                <localNumber>2</localNumber>
+                <postalCode>60-000</postalCode>
+                <street>Zlota</street>
+            </address>
+            <firstName>Marry</firstName>
+            <id>76</id>
+            <pesel>12345678990</pesel>
+            <phoneNumber>567567567</phoneNumber>
+            <surname>Jobs</surname>
+        </customer>
+        <id>75</id>
+        <name>Window Glass</name>
+        <number>2</number>
+        <value>145.11</value>
+        <vat>23</vat>
+    </entities>
+    <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="invoice">
+        <currency>EUR</currency>
+        <customer>
+            <address>
+                <city>Wroclaw</city>
+                <houseNumber>147A</houseNumber>
+                <id>80</id>
+                <localNumber>6B</localNumber>
+                <postalCode>60-111</postalCode>
+                <street>Grunwaldzka</street>
+            </address>
+            <firstName>Bob</firstName>
+            <id>79</id>
+            <pesel>56565678901</pesel>
+            <phoneNumber>123123123</phoneNumber>
+            <surname>Popins</surname>
+        </customer>
+        <id>78</id>
+        <name>TV</name>
+        <number>3</number>
+        <value>1145.11</value>
+        <vat>23</vat>
+    </entities>
+</xmlData>
