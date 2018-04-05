@@ -86,9 +86,6 @@ public class InvoiceModalPanel extends JPanel {
         try {
             invoice.setVat(Integer.parseInt(vatTF.getText()));
         } catch (NumberFormatException ignored) {}
-        customerService.remove(invoice.getCustomer());
-        invoice.getCustomer().setId(0);
-        invoice.getCustomer().getAddress().setId(0);
         return invoice;
     }
 

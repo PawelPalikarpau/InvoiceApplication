@@ -1,7 +1,5 @@
 package my.projects.invoiceapplication.application.entity;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +9,7 @@ public class Invoice {
     @Id
     @GeneratedValue
     @Column(name = "invoice_id")
-    private long id;
+    private long idInvoice;
 
     @Column(name = "number")
     private String number;
@@ -20,7 +18,6 @@ public class Invoice {
     private String name;
 
     @ManyToOne
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
@@ -45,12 +42,12 @@ public class Invoice {
         this.vat = vat;
     }
 
-    public long getId() {
-        return id;
+    public long getIdInvoice() {
+        return idInvoice;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdInvoice(long idInvoice) {
+        this.idInvoice = idInvoice;
     }
 
     public String getNumber() {
@@ -108,7 +105,7 @@ public class Invoice {
 
         Invoice invoice = (Invoice) o;
 
-        if (id != invoice.id) return false;
+        if (idInvoice != invoice.idInvoice) return false;
         if (Double.compare(invoice.value, value) != 0) return false;
         if (vat != invoice.vat) return false;
         if (number != null ? !number.equals(invoice.number) : invoice.number != null) return false;
@@ -121,7 +118,7 @@ public class Invoice {
     public int hashCode() {
         int result;
         long temp;
-        result = (int) (id ^ (id >>> 32));
+        result = (int) (idInvoice ^ (idInvoice >>> 32));
         result = 31 * result + (number != null ? number.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (customer != null ? customer.hashCode() : 0);

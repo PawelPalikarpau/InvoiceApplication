@@ -3,7 +3,4 @@
 This project is Spring Boot + CRUD/Hibernate Swing application.
 
 ## How to launch application
-- You must clone this project on your computer
-- You must configure database on your computer in cloned project
-    - In file application.yml
-- You must run spring application
+- You must clone this project on your computer and run the application

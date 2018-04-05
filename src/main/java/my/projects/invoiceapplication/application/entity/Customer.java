@@ -1,7 +1,5 @@
 package my.projects.invoiceapplication.application.entity;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +9,7 @@ public class Customer {
     @Id
     @GeneratedValue
     @Column(name = "customer_id")
-    private long id;
+    private long idCustomer;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -26,7 +24,6 @@ public class Customer {
     private String phoneNumber;
 
     @ManyToOne
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 
@@ -41,12 +38,12 @@ public class Customer {
         this.address = address;
     }
 
-    public long getId() {
-        return id;
+    public long getIdCustomer() {
+        return idCustomer;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdCustomer(long idCustomer) {
+        this.idCustomer = idCustomer;
     }
 
     public String getFirstName() {
@@ -96,7 +93,7 @@ public class Customer {
 
         Customer customer = (Customer) o;
 
-        if (id != customer.id) return false;
+        if (idCustomer != customer.idCustomer) return false;
         if (firstName != null ? !firstName.equals(customer.firstName) : customer.firstName != null) return false;
         if (surname != null ? !surname.equals(customer.surname) : customer.surname != null) return false;
         if (pesel != null ? !pesel.equals(customer.pesel) : customer.pesel != null) return false;
@@ -107,7 +104,7 @@ public class Customer {
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = (int) (idCustomer ^ (idCustomer >>> 32));
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + (pesel != null ? pesel.hashCode() : 0);

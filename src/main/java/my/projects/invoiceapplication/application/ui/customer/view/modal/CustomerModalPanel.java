@@ -75,8 +75,6 @@ public class CustomerModalPanel extends JPanel {
         customer.setSurname(surnameTF.getText());
         customer.setPesel(peselTF.getText());
         customer.setPhoneNumber(phoneNumberTF.getText());
-        addressService.remove(customer.getAddress());
-        customer.getAddress().setId(0);
         return customer;
     }
 

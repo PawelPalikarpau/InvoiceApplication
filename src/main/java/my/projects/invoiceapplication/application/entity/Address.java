@@ -9,7 +9,7 @@ public class Address {
     @Id
     @GeneratedValue
     @Column(name = "address_id")
-    private long id;
+    private long idAddress;
 
     @Column(name = "city")
     private String city;
@@ -29,6 +29,15 @@ public class Address {
     public Address() {
     }
 
+    public Address(long idAddress, String city, String street, String houseNumber, String localNumber, String postalCode) {
+        this.idAddress = idAddress;
+        this.city = city;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.localNumber = localNumber;
+        this.postalCode = postalCode;
+    }
+
     public Address(String city, String street, String houseNumber, String localNumber, String postalCode) {
         this.city = city;
         this.street = street;
@@ -37,12 +46,12 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    public long getId() {
-        return id;
+    public long getIdAddress() {
+        return idAddress;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdAddress(long idAddress) {
+        this.idAddress = idAddress;
     }
 
     public String getCity() {
@@ -90,19 +99,19 @@ public class Address {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Address that = (Address) o;
+        Address address = (Address) o;
 
-        if (id != that.id) return false;
-        if (city != null ? !city.equals(that.city) : that.city != null) return false;
-        if (street != null ? !street.equals(that.street) : that.street != null) return false;
-        if (houseNumber != null ? !houseNumber.equals(that.houseNumber) : that.houseNumber != null) return false;
-        if (localNumber != null ? !localNumber.equals(that.localNumber) : that.localNumber != null) return false;
-        return postalCode != null ? postalCode.equals(that.postalCode) : that.postalCode == null;
+        if (idAddress != address.idAddress) return false;
+        if (city != null ? !city.equals(address.city) : address.city != null) return false;
+        if (street != null ? !street.equals(address.street) : address.street != null) return false;
+        if (houseNumber != null ? !houseNumber.equals(address.houseNumber) : address.houseNumber != null) return false;
+        if (localNumber != null ? !localNumber.equals(address.localNumber) : address.localNumber != null) return false;
+        return postalCode != null ? postalCode.equals(address.postalCode) : address.postalCode == null;
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
+        int result = (int) (idAddress ^ (idAddress >>> 32));
         result = 31 * result + (city != null ? city.hashCode() : 0);
         result = 31 * result + (street != null ? street.hashCode() : 0);
         result = 31 * result + (houseNumber != null ? houseNumber.hashCode() : 0);
